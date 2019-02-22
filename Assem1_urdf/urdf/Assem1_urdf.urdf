@@ -1,0 +1,255 @@
+<robot
+  name="Assem1_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.44066459361123 0.803334012807176 0.569306247129902"
+        rpy="0 0 0" />
+      <mass
+        value="8.69184858352695" />
+      <inertia
+        ixx="0.860895974683048"
+        ixy="-0.00704161000289546"
+        ixz="-0.00699864099471093"
+        iyy="1.07159560650725"
+        iyz="0.00811538509915592"
+        izz="0.460018647042947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LeftWheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.47241580039648E-08 0.0634921351173843 -5.36982473930969E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.035020543878" />
+      <inertia
+        ixx="0.0320875565704727"
+        ixy="2.80973836388013E-10"
+        ixz="-6.90456203713066E-10"
+        iyy="0.0636284100347955"
+        iyz="-5.63991637215419E-08"
+        izz="0.0320875993088225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/LeftWheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/LeftWheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Leftwheel"
+    type="continuous">
+    <origin
+      xyz="0.745950758780862 -0.74400975696543 0.667062010104361"
+      rpy="3.20185931570718E-13 -1.50139197553461 -1.57079632679522" />
+    <parent
+      link="base_link" />
+    <child
+      link="LeftWheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RightWheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.45480643087836E-08 -0.0357241497257938 -5.36898210556913E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.03502054777133" />
+      <inertia
+        ixx="0.0320875565680011"
+        ixy="2.80973899819489E-10"
+        ixz="-6.95064609277136E-10"
+        iyy="0.0636284100236435"
+        iyz="-5.63960322945588E-08"
+        izz="0.0320875993005063" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/RightWheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/RightWheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightWheel"
+    type="continuous">
+    <origin
+      xyz="0.111734473793581 -0.744009756965418 0.667062010104351"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RightWheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="CameraStand_Link">
+    <inertial>
+      <origin
+        xyz="-8.71525074330748E-15 -6.32827124036339E-15 0.820000000000002"
+        rpy="0 0 0" />
+      <mass
+        value="0.70133281991713" />
+      <inertia
+        ixx="0.157218632107083"
+        ixy="-1.8927939519673E-19"
+        ixz="1.65951517761532E-15"
+        iyy="0.157218632107083"
+        iyz="1.19596126951288E-15"
+        izz="5.3138805981334E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/CameraStand_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/CameraStand_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Camera"
+    type="fixed">
+    <origin
+      xyz="0.478450758780854 -0.977209756965468 2.26453490642897"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="CameraStand_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="CastorWheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0329877421616241 1.85353971858815E-05 0.0133936820061429"
+        rpy="0 0 0" />
+      <mass
+        value="0.509123487385354" />
+      <inertia
+        ixx="0.000753004743019731"
+        ixy="5.87973887767517E-06"
+        ixz="0.000353721830214362"
+        iyy="0.00204143158378067"
+        iyz="3.94279279233692E-06"
+        izz="0.00162802218520037" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/CastorWheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.294117647058824 0.294117647058824 0.294117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1_urdf/meshes/CastorWheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="CastorWheel"
+    type="fixed">
+    <origin
+      xyz="0.468012264144741 -0.264149205588468 0.528534906430052"
+      rpy="-1.30289260155314E-14 0.552266782581841 1.73843824431009" />
+    <parent
+      link="base_link" />
+    <child
+      link="CastorWheel_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
